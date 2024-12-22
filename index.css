@@ -1,0 +1,60 @@
+body{
+    width: 800px;
+    height: 800px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+   /* border: 2px solid black;*/
+    gap: 10px;
+    
+}
+.container{
+    width: 600px;
+    height: 600px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+button{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 10px;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 15px;
+    background-color: burlywood;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+.fan {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    bottom: 40%;
+    display: flex;
+    transition: 0.5 ease;
+}
+@keyframes rotator {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.slow:hover ~ .fan img {
+    animation: rotator 4s infinite linear;
+}
+.medium:hover ~ .fan img {
+    animation:rotator 3s infinite linear;
+}
+.speed:hover ~ .fan img {
+    animation:rotator 1s infinite linear;
+}
+.highspeed:hover ~ .fan img {
+    animation:rotator 0.4s infinite linear;
+}
